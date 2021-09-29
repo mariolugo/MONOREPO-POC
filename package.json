@@ -1,21 +1,21 @@
 {
-  "name": "frontend.cincel.digital",
+  "name": "belong",
   "version": "1.0.0",
   "private": true,
-  "repository": "git@gitlab.com:cincel.digital/frontend.cincel.digital.git",
-  "author": "CINCEL",
+  "repository": "",
+  "author": "BELONG",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "build:tailwind": "cross-env NODE_ENV=development yarn workspace @cincel/ui build:tailwind",
+    "build:tailwind": "cross-env NODE_ENV=development yarn workspace @belong/ui build:tailwind",
     "clean": "tsc -b tsconfig.build.json --clean",
-    "story": "yarn workspace @cincel/app run storybook",
+    "story": "yarn workspace @belong/app run storybook",
     "watch": "tsc -b tsconfig.build.json --watch",
     "prestart": "tsc -b tsconfig.build.json && yarn build:tailwind",
-    "start": "yarn prestart && concurrently -k \"yarn workspace @cincel/app dev\" \"yarn workspace @cincel/ui storybook --quiet\"",
-    "start:sb": "yarn workspace @cincel/ui run storybook",
-    "start:app": "yarn workspace @cincel/app run dev",
+    "start": "yarn prestart && concurrently -k \"yarn workspace @belong/app dev\" \"yarn workspace @belong/ui storybook --quiet\"",
+    "start:sb": "yarn workspace @belong/ui run storybook",
+    "start:app": "yarn workspace @belong/app run dev",
     "format": "prettier --write ",
     "lint": "eslint --ext ts --ext tsx --fix-dry-run",
     "prepare": "husky install"

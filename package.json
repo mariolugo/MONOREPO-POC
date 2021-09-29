@@ -9,6 +9,9 @@
   ],
   "scripts": {
     "build:tailwind": "cross-env NODE_ENV=development yarn workspace @belong/ui build:tailwind",
+    "build:prod": " tsc -b tsconfig.build.json && cross-env NODE_ENV=production yarn workspace @belong/ui build:tailwind",
+    "build:release": " yarn run clean && yarn build:prod && yarn workspace @belong/app run build",
+    "build:sb": "yarn build:prod && yarn workspace @belong/ui run build-storybook",
     "clean": "tsc -b tsconfig.build.json --clean",
     "story": "yarn workspace @belong/app run storybook",
     "watch": "tsc -b tsconfig.build.json --watch",

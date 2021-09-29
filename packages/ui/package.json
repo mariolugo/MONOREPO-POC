@@ -1,0 +1,63 @@
+{
+  "name": "@belong/ui",
+  "version": "1.0.0",
+  "private": "true",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**",
+    "lib/index.css"
+  ],
+  "scripts": {
+    "build:tailwind": "tailwindcss build src/index.css -o lib/tailwind.css",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build-storybook": "build-storybook",
+    "build": "tsc -b tsconfig.build.json",
+    "lint": "eslint src --ext ts --ext tsx --fix-dry-run",
+    "format": "prettier --write src",
+    "test": "jest",
+    "test:coverage": "set CI=true && jest --coverage ",
+    "test:watch": "jest --watch",
+    "css-watch": "watch -p \"./src/index.css\" -c \"yarn run build:tailwind\"",
+    "chromatic": "npx chromatic --project-token 9e1bf25f3596"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.3.0",
+    "@popperjs/core": "^2.9.2",
+    "classnames": "^2.3.1",
+    "react-dnd": "^14.0.2",
+    "react-dnd-html5-backend": "^14.0.0",
+    "react-hook-form": "^7.0.7",
+    "react-hotkeys": "^2.0.0-pre9",
+    "react-pdf": "^5.3.0",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "@belong/client": "*",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/addon-viewport": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@svgr/webpack": "^5.5.0",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/hammerjs": "^2.0.39",
+    "@types/storybook__react": "^5.2.1",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-inline-react-svg": "^2.0.1",
+    "chromatic": "^5.7.1",
+    "cross-env": "^7.0.3",
+    "jest": "^26.6.3",
+    "source-map-loader": "^2.0.1",
+    "storybook-css-modules-preset": "^1.1.1",
+    "typescript-plugin-css-modules": "^3.2.0",
+    "webpack-filter-warnings-plugin": "^1.2.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "yarn": "^1.22.10"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "composite": true
+  },
+  "files": [],
+  "include": [],
+  "references": [
+    {
+      "path": "./packages/ui/tsconfig.build.json"
+    },
+    {
+      "path": "./packages/client/tsconfig.build.json"
+    },
+    {
+      "path": "./packages/server"
+    },
+    
+  ]
+}

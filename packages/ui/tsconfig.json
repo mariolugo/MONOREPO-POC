@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "jsx": "react",
+    "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    // "types": ["node", "jest"],
+    // "typeRoots": ["./types", "node_modules/@types"],
+    "composite": true,
+    "outDir": "lib",
+    "rootDir": "src",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "exclude": ["node_modules"],
+  // "exclude": ["types"],
+  "include": ["src/**/*"]
+}

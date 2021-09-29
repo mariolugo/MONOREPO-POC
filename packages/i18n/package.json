@@ -1,0 +1,16 @@
+{
+  "name": "@belong/i18n",
+  "version": "1.0.0",
+  "description": "belong i18n translations package",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "dependencies": {
+    "react-i18next": "^11.8.15"
+  },
+  "devDependencies": {
+    "@types/i18next": "^13.0.0",
+    "i18next": "^20.2.2",
+    "i18next-browser-languagedetector": "^6.1.0",
+    "i18next-http-backend": "^1.2.2"
+  }
+}

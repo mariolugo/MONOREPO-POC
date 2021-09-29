@@ -1,0 +1,9 @@
+**/lib/**
+**/lib-esm/**
+**/build/**
+**/node_modules/**
+**/*.test.{js,jsx,ts,tsx}
+**/*.spec.{js,jsx,ts,tsx}
+lib/
+lib-esm/
+coverage/
